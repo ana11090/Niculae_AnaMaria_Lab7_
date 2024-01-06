@@ -1,4 +1,6 @@
-﻿namespace Niculae_AnaMaria_Lab2.Models.LibraryViewModels
+﻿using LibraryModel.Models;
+
+namespace Niculae_AnaMaria_Lab2.Models.LibraryViewModels
 {
     public class PublishedBookData
     {

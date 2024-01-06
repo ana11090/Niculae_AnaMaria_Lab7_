@@ -4,6 +4,8 @@ using System.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 using Niculae_AnaMaria_Lab2.Data;
 using Niculae_AnaMaria_Lab2.Models.LibraryViewModels;
+using LibraryModel.Data;
+using LibraryModel.Models;
 
 namespace Niculae_AnaMaria_Lab2.Controllers
 {

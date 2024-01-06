@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Niculae_AnaMaria_Lab2.Data;
+using LibraryModel.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

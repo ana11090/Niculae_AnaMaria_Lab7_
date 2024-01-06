@@ -1,8 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Niculae_AnaMaria_Lab2.Models;
-using Niculae_AnaMaria_Lab2.Models.LibraryViewModels;
+//using Niculae_AnaMaria_Lab2.Models;
+//using Niculae_AnaMaria_Lab2.Models.LibraryViewModels;
+using LibraryModel.Data;
+using LibraryModel.Models;
 
-namespace Niculae_AnaMaria_Lab2.Data
+namespace LibraryModel.Data
 {
     public class LibraryContext : DbContext
     {

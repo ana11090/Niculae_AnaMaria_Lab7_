@@ -7,8 +7,10 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Niculae_AnaMaria_Lab2.Data;
 using Niculae_AnaMaria_Lab2.Models.LibraryViewModels;
+using LibraryModel.Models;
+using LibraryModel.Data;
 
-namespace Niculae_AnaMaria_Lab2.Controllers
+namespace LibraryModel.Controllers
 {
     public class PublishersController : Controller
     {

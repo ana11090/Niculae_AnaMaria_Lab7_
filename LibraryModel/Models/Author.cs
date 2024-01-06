@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
+//using Niculae_AnaMaria_Lab2.Models;
 
-namespace Niculae_AnaMaria_Lab2.Models
+namespace LibraryModel.Models
 {
     public class Author
     {

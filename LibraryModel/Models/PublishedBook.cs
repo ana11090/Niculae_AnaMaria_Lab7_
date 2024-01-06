@@ -1,6 +1,7 @@
 ﻿using System.Security.Policy;
+using LibraryModel.Models;
 
-namespace Niculae_AnaMaria_Lab2.Models.LibraryViewModels
+namespace LibraryModel.Models
 {
     public class PublishedBook
     {

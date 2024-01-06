@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using LibraryModel.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Niculae_AnaMaria_Lab2.Data;
 using Niculae_AnaMaria_Lab2.Models;
+using LibraryModel.Models; 
 
 namespace Niculae_AnaMaria_Lab2.Controllers
 {

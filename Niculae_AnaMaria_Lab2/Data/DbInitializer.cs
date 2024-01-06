@@ -1,14 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-
-
-
-using Niculae_AnaMaria_Lab2.Models;
-using static NuGet.Packaging.PackagingConstants;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-using System.Runtime.ConstrainedExecution;
-using System.Security.Policy;
-using Publisher = Niculae_AnaMaria_Lab2.Models.LibraryViewModels.Publisher;
-using Niculae_AnaMaria_Lab2.Models.LibraryViewModels;
+using Publisher = LibraryModel.Models.Publisher;
+using LibraryModel.Models;
+using LibraryModel.Data;
 
 namespace Niculae_AnaMaria_Lab2.Data
 {

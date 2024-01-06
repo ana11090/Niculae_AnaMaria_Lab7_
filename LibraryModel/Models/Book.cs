@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
-using Niculae_AnaMaria_Lab2.Models.LibraryViewModels;
+//using Niculae_AnaMaria_Lab2.Models.LibraryViewModels;
+using LibraryModel.Models;
 
-namespace Niculae_AnaMaria_Lab2.Models
+namespace LibraryModel.Models
 {
     public class Book
     {
