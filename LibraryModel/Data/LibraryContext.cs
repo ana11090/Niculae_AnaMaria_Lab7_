@@ -10,6 +10,8 @@ namespace Niculae_AnaMaria_Lab2.Data
        base(options)
         {
         }
+
+
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Book> Books { get; set; }
