@@ -14,5 +14,8 @@ namespace LibraryModel.Models
         public string Adress { get; set; }
         public DateTime BirthDate { get; set; }
         public ICollection<Order> Orders { get; set; }
+
+        public int CityID { get; set; } // Cheie străină
+        public City City { get; set; } // Navigation property
     }
 }
