@@ -16,7 +16,7 @@ namespace Niculae_AnaMaria_Lab2.Controllers
     public class CustomersController : Controller
     {
         private readonly LibraryContext _context;
-        private string _baseUrl = "http://localhost:58730/api/Customers";
+        private string _baseUrl = "http://localhost:7001/api/Customers";
 
         public CustomersController(LibraryContext context)
         {

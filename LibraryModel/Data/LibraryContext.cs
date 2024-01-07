@@ -36,9 +36,9 @@ namespace LibraryModel.Data
             modelBuilder.Entity<PublishedBook>()
             .HasKey(c => new { c.BookID, c.PublisherID });//configureaza cheia primara compusa
             modelBuilder.Entity<Customer>().HasOne(c => c.City).WithMany(c => c.Customers).HasForeignKey(c => c.CityID);
+
+
         }
-         
+
     }
-
-
 }
