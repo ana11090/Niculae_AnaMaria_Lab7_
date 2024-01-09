@@ -9,9 +9,12 @@ using Niculae_AnaMaria_Lab2.Data;
 using Niculae_AnaMaria_Lab2.Models.LibraryViewModels;
 using LibraryModel.Models;
 using LibraryModel.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace LibraryModel.Controllers
 {
+    [Authorize(Policy = "OnlySales")]
+
     public class PublishersController : Controller
     {
         private readonly LibraryContext _context;
