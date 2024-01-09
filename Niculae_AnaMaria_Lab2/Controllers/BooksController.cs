@@ -9,9 +9,12 @@ using Niculae_AnaMaria_Lab2.Data;
 using Niculae_AnaMaria_Lab2.Models;
 using LibraryModel.Data;
 using LibraryModel.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Niculae_AnaMaria_Lab2.Controllers
 {
+    [Authorize(Roles = "Employee")]
+
     public class BooksController : Controller
     {
         private readonly LibraryContext _context;
@@ -59,7 +62,7 @@ namespace Niculae_AnaMaria_Lab2.Controllers
         //    }
         //    return View(await books.AsNoTracking().ToListAsync());
         //}
-
+        [AllowAnonymous]
         public async Task<IActionResult> Index(
         string sortOrder,
         string currentFilter,
@@ -104,7 +107,7 @@ namespace Niculae_AnaMaria_Lab2.Controllers
             return View(await PaginatedList<Book>.CreateAsync(books.AsNoTracking(), pageNumber ??
            1, pageSize));
         }
-
+        [AllowAnonymous]
         // GET: Books/Details/5
         public async Task<IActionResult> Details(int? id)
         {

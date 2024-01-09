@@ -20,8 +20,10 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options =>
     options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(10);
     options.Lockout.AllowedForNewUsers = true;
 })
+    .AddRoles<IdentityRole>() // Add this line to configure role services
     .AddEntityFrameworkStores<IdentityContext>()
     .AddDefaultTokenProviders();
+
 
 
 builder.Services.AddAuthorization(opts => {
@@ -36,8 +38,18 @@ builder.Services.AddDbContext<IdentityContext>(options =>
 
 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddRazorPages();
+builder.Services.AddAuthorization(opts => {
+    opts.AddPolicy("SalesManager", policy => {
+        policy.RequireRole("Manager");
+        policy.RequireClaim("Department", "Sales");
+    });
+});
+builder.Services.ConfigureApplicationCookie(opts =>
+{
+    opts.AccessDeniedPath = "/Identity/Account/AccessDenied";
 
-
+});
 var app = builder.Build();
 
 
