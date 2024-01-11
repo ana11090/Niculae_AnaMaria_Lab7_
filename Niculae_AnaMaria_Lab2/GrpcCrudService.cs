@@ -38,4 +38,18 @@ public class GrpcCrudService : CustomerService.CustomerServiceBase
         db.SaveChanges();
         return Task.FromResult(new Empty());
     }
-} 
+
+    public override Task<Empty> Update(Customer requestData, ServerCallContext context)
+    {
+        db.Customers.Update(new ModelAccess.Customer()
+        {
+            CustomerID = requestData.CustomerId,
+            Name = requestData.Name,
+            Adress = requestData.Adress,
+            BirthDate = DateTime.Parse(requestData.Birthdate)
+        });
+        db.SaveChanges();
+        return Task.FromResult(new Empty());
+    }
+
+}

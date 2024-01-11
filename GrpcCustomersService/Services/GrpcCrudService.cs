@@ -39,4 +39,28 @@ public class GrpcCrudService : CustomerService.CustomerServiceBase
         db.SaveChanges();
         return Task.FromResult(new Empty());
     }
+
+    public override Task<Customer> Get(CustomerId requestData, ServerCallContext context)
+    {
+        var data = db.Customers.Find(requestData.Id);
+
+        Customer emp = new Customer()
+        {
+            CustomerId = data.CustomerID,
+            Name = data.Name,
+            Adress = data.Adress
+
+        };
+        return Task.FromResult(emp);
+    }
+
+    public override Task<Empty> Delete(CustomerId requestData, ServerCallContext
+   context)
+    {
+        var data = db.Customers.Find(requestData.Id);
+        db.Customers.Remove(data);
+
+        db.SaveChanges();
+        return Task.FromResult(new Empty());
+    }
 } 
