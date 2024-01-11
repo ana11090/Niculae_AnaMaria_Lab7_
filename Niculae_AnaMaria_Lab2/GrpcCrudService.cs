@@ -2,7 +2,6 @@ using Grpc.Core;
 using GrpcCustomersService;
 using DataAccess = LibraryModel.Data;
 using ModelAccess = LibraryModel.Models;
-
 public class GrpcCrudService : CustomerService.CustomerServiceBase
 {
 
