@@ -15,6 +15,5 @@ namespace Niculae_AnaMaria_Lab2.Models
 
 
         public string[]? DeleteIds { get; set; }
-        public string[]? AddIds { get; set; }
     }
 }
